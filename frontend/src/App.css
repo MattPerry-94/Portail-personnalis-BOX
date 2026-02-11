@@ -1,0 +1,303 @@
+.App {
+  min-height: 100vh;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 40%, #f9fafb 100%);
+  color: #111827;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, .login-title, .files-header-title {
+  font-family: 'Poppins', 'Inter', sans-serif;
+}
+
+.App-header {
+  background-color: #ffffff;
+  padding: 16px 32px;
+  color: #111827;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+  text-align: left;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.logos-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.collaboration-x {
+  font-size: 24px;
+  color: #9ca3af;
+  font-weight: 300;
+  margin-top: 4px; /* Slight adjustment for optical alignment */
+}
+
+.App-logo {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+.Box-logo {
+  height: 45px; /* Réduit pour correspondre visuellement au logo Ragni */
+  width: auto;
+  object-fit: contain;
+}
+
+.App-header h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+main {
+  max-width: 1200px;
+  margin: 24px auto 40px;
+  padding: 0 24px;
+}
+
+.files-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px 24px 24px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+  border: 1px solid #e5e7eb;
+}
+
+.files-header-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.files-header-subtitle {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.files-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease, transform 0.05s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Login Page Styles */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f2f5 0%, #e2e8f0 100%);
+  padding: 20px;
+}
+
+.login-card {
+  background: white;
+  padding: 48px;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15), 0 10px 20px -5px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  max-width: 420px;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.login-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 36px;
+}
+
+.login-logo-ragni {
+  height: 55px;
+  width: auto;
+  object-fit: contain;
+}
+
+.login-logo-box {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+}
+
+.login-x {
+  font-size: 18px;
+  color: #cbd5e1;
+  font-weight: 300;
+}
+
+.login-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 16px;
+  letter-spacing: -0.03em;
+}
+
+.login-description {
+  color: #64748b;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.login-btn {
+  background-color: #0061D5;
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 97, 213, 0.2), 0 2px 4px -1px rgba(0, 97, 213, 0.1);
+}
+
+.login-btn:hover {
+  background-color: #0050b3;
+  box-shadow: 0 10px 15px -3px rgba(0, 97, 213, 0.3), 0 4px 6px -2px rgba(0, 97, 213, 0.15);
+  transform: translateY(-2px);
+}
+
+.login-btn:active {
+  transform: translateY(0);
+}
+
+/* Table Hover Effect */
+.files-table tr {
+  transition: background-color 0.2s ease;
+}
+
+.files-table tr:hover {
+  background-color: #f3f9ff; /* Light Box Blue background on hover */
+}
+
+/* Button Styles - Box Blue Primary */
+.btn-primary {
+  background-color: #0061D5;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0050b3;
+  box-shadow: 0 4px 6px -1px rgba(0, 97, 213, 0.2);
+}
+
+/* Button Styles - Secondary (Outline Blue) */
+.btn-secondary {
+  background-color: white;
+  color: #0061D5;
+  border: 1px solid #0061D5;
+}
+
+.btn-secondary:hover {
+  background-color: #f0f7ff;
+}
+
+.login-footer {
+  margin-top: 32px;
+  font-size: 12px;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+/* Preview Modal - Styles améliorés */
+.preview-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75); /* Fond plus sombre */
+  backdrop-filter: blur(5px); /* Effet de flou sur l'arrière-plan */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Très haut z-index pour passer au-dessus de tout */
+  animation: fadeIn 0.2s ease-out;
+}
+
+.preview-modal {
+  background: white;
+  width: 90%;
+  height: 90%;
+  max-width: 1600px; /* Limite la largeur sur les très grands écrans */
+  position: relative;
+  padding: 0;
+  border-radius: 12px; /* Coins arrondis */
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* Ombre portée profonde */
+  overflow: hidden; /* Pour que l'iframe ne dépasse pas des coins arrondis */
+  display: flex;
+  flex-direction: column;
+  animation: scaleIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.preview-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: white;
+  color: #111827;
+  border: 1px solid #e5e7eb;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  z-index: 10; /* Au-dessus de l'iframe */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: all 0.2s;
+}
+
+.preview-close:hover {
+  background-color: #f3f4f6;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
